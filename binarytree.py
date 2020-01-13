@@ -125,7 +125,7 @@ class BinaryTree:
         self.balanceUtil(nodes)
 
     def balanceUtil(self, lst):
-        medianIndex = len(lst)/2
+        medianIndex = int(len(lst)/2)
 
         self.add(lst[medianIndex])
 
