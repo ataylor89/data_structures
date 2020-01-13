@@ -1,9 +1,8 @@
 # This is a self-balancing binary tree that supports the add, search, toList, isBalanced and balance operations
 class BinaryTree:
     class Node:
-        def __init__(self, val, height):
+        def __init__(self, val):
             self.val = val
-            self.height = height
             self.left = None
             self.right = None
     
@@ -13,7 +12,7 @@ class BinaryTree:
 
     def add(self, val):
         if self.root == None:
-            self.root = self.Node(val, 0)
+            self.root = self.Node(val)
         else:
             self.addUtil(val, self.root, 1) 
     
@@ -22,7 +21,7 @@ class BinaryTree:
             return
 
         if val > node.val and node.right == None:
-            node.right = self.Node(val, depth)
+            node.right = self.Node(val)
             if depth > self.height:
                 self.height = depth
 
@@ -30,7 +29,7 @@ class BinaryTree:
             self.addUtil(val, node.right, depth+1)
 
         elif val < node.val and node.left == None:
-            node.left = self.Node(val, depth)
+            node.left = self.Node(val)
             if depth > self.height:
                 self.height = depth
 
