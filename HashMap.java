@@ -24,7 +24,7 @@ public class HashMap<K,V> {
     private int size;
 
     public HashMap(int capacity) {
-        this.hashTable = new ArrayList<HashNode<K,V>>(capacity);
+        this.hashTable = new ArrayList<>(capacity);
         this.capacity = capacity;
 
         for (int i = 0; i < capacity; i++)
@@ -34,7 +34,7 @@ public class HashMap<K,V> {
     public void put(K key, V value) {
         int hashIndex = hash(key);
 
-        HashNode<K,V> insertion = new HashNode<K,V>(key, value);
+        HashNode<K,V> insertion = new HashNode<>(key, value);
 
         if (hashTable.get(hashIndex) == null) {
             hashTable.add(hashIndex, insertion);
@@ -126,7 +126,7 @@ public class HashMap<K,V> {
     }
 
     public static void main(String[] args) {
-        HashMap<String, String> map = new HashMap<String, String>(50);
+        HashMap<String, String> map = new HashMap<>(50);
 
         System.out.println("Putting breakfast, lunch and dinner into the map...");
         map.put("Breakfast", "Coffee and eggs");
