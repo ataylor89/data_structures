@@ -2,10 +2,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * This is an implementation of a hash map in Java.
- * It uses a hash table and buckets consisting of linked lists.
+ * This is an implementation of a hash map in Java supporting the put, get, remove, and toString operations.
+ * It uses a hash table with buckets consisting of linked lists.
  * The hash function simply performs the mod operator on the key's hash code.
- * This implementation supports the put, get, remove, and toString operations.
  */
 public class HashMap<K,V> {
     
