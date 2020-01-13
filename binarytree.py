@@ -1,3 +1,4 @@
+# This is a self-balancing binary tree that supports the add, search, toList and balance operations
 class BinaryTree:
     class Node:
         def __init__(self, val, height):
